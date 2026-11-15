@@ -2,7 +2,7 @@
 using namespace std;
 
 class Distance {
-    int feet, inch;                              // private
+    int feet, inch;                              
 public:
     Distance(int f = 0, int i = 0) : feet(f), inch(i) {}
     // friend can read private feet/inch of BOTH arguments
@@ -18,6 +18,6 @@ Distance add(const Distance &a, const Distance &b) {
 int main() {
     Distance d1(5, 8), d2(3, 7);
     Distance d3 = add(d1, d2);
-    d3.show();                                   // 9ft 3in
+    d3.show();                                   
     return 0;
 }

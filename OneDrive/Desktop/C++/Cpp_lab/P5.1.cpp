@@ -3,13 +3,13 @@ using namespace std;
 
 class Widget {
     int id;
-    static int count;                  // declaration: shared by all objects
+    static int count;                  
 public:
     Widget()  { id = ++count; cout << "Created  W" << id << endl; }
     ~Widget() { --count; cout << "Destroyed W" << id << endl; }
     static int alive() { return count; }  // no 'this'
 };
-int Widget::count = 0;                 // definition (exactly once)
+int Widget::count = 0;                 
 
 int main() {
     Widget a, b;
